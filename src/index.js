@@ -5,9 +5,11 @@ import './index.css'
 class AddTask extends React.Component {
     render(){
         return(
-            <>
-                Add a task
-            </>
+            <form>
+                <input type="text"/>
+                
+                <input type="button" value="Add Task"/>
+            </form>
         )
     }
 }
