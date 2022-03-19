@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM  from "react-dom";
+import React from "react";
+import './index.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class AddTask extends React.Component{
+    render(){
+        return(
+            <div>Add a Task</div>
+        )
+    }
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class TaskList extends React.Component{
+    render(){
+        return(
+            <div>
+                <div>{this.props.purpose}</div>
+               
+            
+            </div>
+        )
+    }
+}
+class App extends React.Component{
+
+    render(){
+        const name = "Debadyuti";
+        const a =10;
+        const b = 5;
+       
+        return(
+            <div>
+                <AddTask/>
+                <TaskList purpose="Task To Do" />
+                <TaskList purpose="Finished Tasks"  />
+            </div>
+            
+        
+
+        );
+    }
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"))
