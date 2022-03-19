@@ -14,7 +14,7 @@ class TaskList extends React.Component{
     render(){
         return(
             <div>
-                <div>{this.props.purpose}</div>
+                <div className={this.props.forStyling}>{this.props.purpose}</div>
                
             
             </div>
@@ -24,16 +24,19 @@ class TaskList extends React.Component{
 class App extends React.Component{
 
     render(){
-        const name = "Debadyuti";
-        const a =10;
-        const b = 5;
        
         return(
-            <div>
+            <>
+
+            <div className="add-task">
                 <AddTask/>
-                <TaskList purpose="Task To Do" />
-                <TaskList purpose="Finished Tasks"  />
             </div>
+            <div className="task-lists">
+
+                <TaskList purpose="Task To Do" forStyling="todo" />
+                <TaskList purpose="Finished Tasks"  forStyling="finished"/>
+            </div>
+            </>
             
         
 
